@@ -4,5 +4,12 @@
     <string name="app_name">Proyecto_Qiz</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="title_activity_registro">Registro</string>
+    <string name="adiosmundo">Pene</string>
+    <string name="title_activity_learning">LearningActivity</string>
+    <string name="Registrarse">Registrarse</string>
 
+    <string name="facebook_app_id">598597040241505</string>
+    <string name="app_id">598597040241505</string>
+    <string name="title_facebook_login">Facebook login</string>
 </resources>
