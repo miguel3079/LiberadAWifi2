@@ -7,7 +7,6 @@
     <style name="botton">
         <item name="android:width">81dp</item>
         <item name="android:height">63dp</item>
-        <item name="android:background">"@drawable/botonback"</item>
     </style>
 
 
