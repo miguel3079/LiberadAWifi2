@@ -1,15 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Proyecto_Qiz</string>
-    <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
+    <string name="app_name">proyecto_qiz</string>
+    <string name="action_settings">settings</string>
     <string name="title_activity_registro">Registro</string>
-    <string name="adiosmundo">Pene</string>
     <string name="title_activity_learning">LearningActivity</string>
     <string name="Registrarse">Registrarse</string>
-
-    <string name="facebook_app_id">598597040241505</string>
+    <string name="ParseApId">LPLJJbBhObox41EBfcjYi84il4ywv3DiXCQY0wiK</string>
+    <string name="ParseClientKey">jwfLQI2wuqeYoH4ZCAEYXBmGsltciSHTogQ7KnrI</string>
+    <string name="title_facebook_login">ea</string>
+    <string name="title_activity_contrasena_olvidada">ContrasenaOlvidada</string>
+    <string name="title_activity_panel__inicio">Panel_Inicio</string>
+    <string name="title_activity_puntuacion">Puntuacion</string>
+    <string name="title_activity_chat_aplication">ChatAplication</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="message_hint">Escribe algo</string>
+    <string name="send">Enviar</string>
+    <string name="profile_me">mi foto</string>
+    <string name="profile_other">mi dibujo</string>
     <string name="app_id">598597040241505</string>
-    <string name="title_facebook_login">Facebook login</string>
+    <string name="applicationId">598597040241505</string>
+    <string name="gender">Gender</string>
+    <string name="email">Email</string>
+    <string name="title_activity_user_details_facebook">UserDetailsFacebook</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="title_section1">Menu</string>
+    <string name="title_section2">Ajustes</string>
+    <string name="action_example">Example action</string>
+    <string name="title_activity_login">login</string>
+    <string name="title_activity_menu">Menu</string>
+    <string name="title_activity_ventana_emergente">ventana_emergente</string>
+    <string name="title_activity_salirseguro">salirseguro</string>
+    <string name="title_activity_tomamenu">tomamenu</string>
+    <string name="title_activity_opciones">Opciones</string>
+
 </resources>

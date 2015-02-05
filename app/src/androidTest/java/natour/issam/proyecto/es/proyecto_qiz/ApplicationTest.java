@@ -1,4 +1,4 @@
-package natour.issam.examen.es.proyecto_qiz;
+package natour.issam.proyecto.es.proyecto_qiz;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
