@@ -34,5 +34,30 @@
     <string name="title_activity_salirseguro">salirseguro</string>
     <string name="title_activity_tomamenu">tomamenu</string>
     <string name="title_activity_opciones">Opciones</string>
+    <string name="title_activity_juego1">Juego1</string>
+    <string name="title_activity_Lateral">Lateral</string>
+
+    <!-- Lista de titulos de navegacion -->
+    <string-array name="nav_options">
+        <item>Perfil</item>
+        <item>Favoritos</item>
+        <item>Eventos</item>
+        <item>Lugares</item>
+        <item>Etiquetas</item>
+        <item>Configuración</item>
+        <item>Compartir</item>
+    </string-array>
+    <!-- Lista de iconos de navegacion -->
+    <array name="navigation_iconos">
+        <item>@drawable/ic_action_user</item>
+        <item>@drawable/ic_action_star</item>
+        <item>@drawable/ic_action_event</item>
+        <item>@drawable/ic_action_place</item>
+        <item>@drawable/ic_action_labels</item>
+        <item>@drawable/ic_action_settings</item>
+        <item>@drawable/ic_action_share</item>
+    </array>
+
+    <string name="title_activity_intro">Intro</string>
 
 </resources>
