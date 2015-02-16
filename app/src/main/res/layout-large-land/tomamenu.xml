@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:id="@+id/drawer_layout"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    tools:context="natour.issam.proyecto.es.proyecto_qiz.tomamenu">
+
+    <!-- As the main content view, the view below consumes the entire
+         space available using match_parent in both dimensions. -->
+    <FrameLayout android:id="@+id/container" android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/fondologin" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView5"
+                android:src="@drawable/panel"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView11"
+                android:layout_above="@+id/scrollView2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="46dp"
+                android:src="@drawable/ribbon" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageViewAtrasSa"
+                android:src="@drawable/salir"
+                android:layout_below="@+id/scrollView2"
+                android:layout_alignStart="@+id/scrollView2"
+                android:layout_marginTop="43dp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageViewMonedas"
+                android:src="@drawable/monedas"
+                android:focusableInTouchMode="false"
+                android:layout_below="@+id/scrollView2"
+                android:layout_alignRight="@+id/imageView11"
+                android:layout_alignEnd="@+id/imageView11" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageViewDiamantes"
+                android:src="@drawable/diamantes"
+                android:layout_alignTop="@+id/imageViewAtrasSa"
+                android:layout_alignStart="@+id/imageViewMonedas" />
+
+            <ProgressBar
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:id="@+id/progressBar1"
+                android:layout_width="200dp"
+                android:layout_height="24dp"
+                android:progressDrawable="@drawable/progress_drawable"
+                android:padding="2dp"
+                android:background="@drawable/progress_border"
+                android:layout_above="@+id/scrollView2"
+                android:layout_centerHorizontal="true" />
+
+            <ScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="250dp"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:scrollbarThumbVertical="@drawable/barra"
+                android:id="@+id/scrollView2"
+                android:padding="10dp"
+                android:paddingTop="20dp"
+                android:fadeScrollbars="false">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center_vertical" >
+
+                    <ImageView
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imageViewJugar"
+                        android:src="@drawable/jugar"
+                        android:layout_marginTop="-5dp"
+                        android:gravity="center"
+                        android:layout_gravity="center" />
+
+                    <ImageView
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imageViewTienda"
+                        android:src="@drawable/tienda"
+                        android:layout_marginTop="-25dp"
+                        android:gravity="center"
+                        android:layout_gravity="center" />
+
+                    <ImageView
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imageViewMimons"
+                        android:src="@drawable/monstruo"
+                        android:layout_marginTop="-25dp"
+                        android:gravity="center"
+                        android:layout_gravity="center" />
+
+                    <ImageView
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imageViewLogros"
+                        android:src="@drawable/logros"
+                        android:layout_marginTop="-25dp"
+                        android:gravity="center"
+                        android:layout_gravity="center" />
+
+                    <ImageView
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imageViewRanking"
+                        android:src="@drawable/ranking"
+                        android:layout_marginTop="-25dp"
+                        android:gravity="center"
+                        android:layout_gravity="center" />
+                </LinearLayout>
+            </ScrollView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textViewMonedas"
+                android:layout_marginEnd="33dp"
+                android:layout_alignTop="@+id/imageViewMonedas"
+                android:layout_alignEnd="@+id/imageViewMonedas"
+                android:paddingTop="15dp"
+                android:textColor="#ffffffff" />
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="11121332"
+                android:id="@+id/textView"
+                android:layout_alignTop="@+id/progressBar1"
+                android:layout_toRightOf="@+id/progressBar1"
+                android:layout_toEndOf="@+id/progressBar1" />
+
+        </RelativeLayout>
+    </FrameLayout>
+
+    <!-- android:layout_gravity="start" tells DrawerLayout to treat
+         this as a sliding drawer on the left side for left-to-right
+         languages and on the right side for right-to-left languages.
+         If you're not building against API 17 or higher, use
+         android:layout_gravity="left" instead. -->
+    <!-- The drawer is given a fixed width in dp and extends the full height of
+         the container. -->
+    <fragment android:id="@+id/navigation_drawer"
+        android:layout_width="match_parent" android:layout_height="match_parent"
+        android:layout_weight="0.3"
+        android:layout_gravity="start"
+        android:name="natour.issam.proyecto.es.proyecto_qiz.NavigationDrawerFragment"
+        tools:layout="@layout/fragment_navigation_drawer" />
+
+</android.support.v4.widget.DrawerLayout>

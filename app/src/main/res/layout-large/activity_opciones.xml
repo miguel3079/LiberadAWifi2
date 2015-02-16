@@ -1,0 +1,163 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true"
+    tools:context="natour.issam.proyecto.es.proyecto_qiz.Opciones"
+    android:background="@drawable/fondologin">
+
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/scrollView" >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_row="11"
+                android:layout_column="0"
+                android:weightSum="1"
+                android:layout_columnSpan="16"
+                android:layout_gravity="top"
+                android:background="@drawable/panel">
+
+                <RelativeLayout
+                    android:layout_width="172dp"
+                    android:layout_weight=".30"
+                    android:layout_height="fill_parent"
+                    >
+
+                    <com.parse.ParseImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/perfilfacebookopciones"
+                        android:layout_row="24"
+                        android:layout_column="16"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginLeft="15dp" />
+
+                    <com.parse.ParseImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/perfiluseropciones"
+                        android:layout_row="24"
+                        android:layout_column="16"
+                        android:layout_marginLeft="15dp"
+                        android:onClick="CambiarImagen"
+                        android:nestedScrollingEnabled="false" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".70"
+                    android:layout_marginLeft="20dp"
+                    >
+
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/editText4"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginRight="20dp"
+                        android:singleLine="true"/>
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="25dp"
+                android:id="@+id/linear2"
+                android:background="@drawable/panel">
+
+
+                <RelativeLayout
+                    android:layout_width="170dp"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="SONIDO"
+                        android:id="@+id/textView7"
+                        android:layout_centerVertical="true"
+                        android:layout_centerHorizontal="true" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+
+                    <ToggleButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/togglesonido"
+                        android:layout_centerVertical="true"
+                        android:layout_centerHorizontal="true"
+
+                        android:textOff="Apagado"
+                        android:textOn="Encendido"
+                        android:onClick="getSonido" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="53dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/panel">
+
+                <RelativeLayout
+                    android:layout_width="170dp"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="NOTIFICACIONES"
+                        android:id="@+id/textView8"
+                        android:layout_centerVertical="true"
+                        android:layout_centerHorizontal="true" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ToggleButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="New ToggleButton"
+                        android:id="@+id/togglenotificaciones"
+                        android:layout_centerVertical="true"
+                        android:layout_centerHorizontal="true"
+                        android:textOff="Apagadas"
+                        android:textOn="Encendidas"
+                        android:onClick="getNotificaciones"
+                        android:nestedScrollingEnabled="false" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

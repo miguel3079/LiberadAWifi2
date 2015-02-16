@@ -1,0 +1,125 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="natour.issam.proyecto.es.proyecto_qiz.invitarFriends.InvitarAmigosEmail"
+    android:background="@drawable/fondologearte">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/panel"
+        android:layout_margin="8dp"
+        >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:weightSum="100"
+            android:layout_margin="20dp">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:text="Enviar"
+                android:id="@+id/button"
+                android:layout_gravity="right"
+                android:onClick="enviarEmail" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="10"
+                android:tileMode="repeat"
+                android:layout_marginTop="20dp"
+                    android:color="#FFFFFF"
+           android:width="3dip">
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="30"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/imageView18"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="false"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="true"
+                    android:text="Para:"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:textColor="#000000" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_weight="70"
+                    android:layout_height="match_parent"
+                    android:id="@+id/mailTextPara"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:singleLine="true"
+                    android:layout_toRightOf="@+id/imageView18"
+                    android:layout_toEndOf="@+id/imageView18" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="10"
+                android:tileMode="repeat" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="30"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/textView10"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="false"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="true"
+                    android:text="Asunto"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:textColor="#000000" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_weight="70"
+                    android:layout_height="match_parent"
+                    android:id="@+id/mailTextAsunto"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:singleLine="true"
+                    android:layout_toRightOf="@+id/textView10"
+                    android:layout_toEndOf="@+id/textView10" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="60"
+                android:tileMode="repeat" >
+
+                <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:inputType="textMultiLine"
+                    android:ems="10"
+                    android:id="@+id/mailTextMensaje"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

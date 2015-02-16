@@ -1,15 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Proyecto_Qiz</string>
-    <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
+    <!-- id de aplicaciones -->
+    <!-- facebook -->
+    <string name="app_id">598597040241505</string>
+    <string name="ParseApId">LPLJJbBhObox41EBfcjYi84il4ywv3DiXCQY0wiK</string>
+    <string name="ParseClientKey">jwfLQI2wuqeYoH4ZCAEYXBmGsltciSHTogQ7KnrI</string>
+    <string name="TwitterKey">CXXS9yL411yTHrD194NHbJsob</string>
+    <string name="TwitterSecret">nvAowbisJuWDceotrff01NOOaETE3QvQEQeuLTv7GVyBSuyHjF</string>
+    <string name="app_name">proyecto_qiz</string>
+    <string name="action_settings">settings</string>
     <string name="title_activity_registro">Registro</string>
-    <string name="adiosmundo">Pene</string>
     <string name="title_activity_learning">LearningActivity</string>
     <string name="Registrarse">Registrarse</string>
+    <string name="title_facebook_login">ea</string>
+    <string name="title_activity_contrasena_olvidada">ContrasenaOlvidada</string>
+    <string name="title_activity_panel__inicio">Panel_Inicio</string>
+    <string name="title_activity_puntuacion">Puntuacion</string>
+    <string name="title_activity_chat_aplication">ChatAplication</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="message_hint">Escribe algo</string>
+    <string name="send">Enviar</string>
+    <string name="profile_me">mi foto</string>
+    <string name="profile_other">mi dibujo</string>
+    <string name="gender">Gender</string>
+    <string name="email">Email</string>
+    <string name="title_activity_user_details_facebook">UserDetailsFacebook</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="title_section1">Opcionessssss</string>
+    <string name="action_example">Example action</string>
+    <string name="title_activity_login">login</string>
+    <string name="title_activity_menu">Menu</string>
+    <string name="title_activity_ventana_emergente">ventana_emergente</string>
+    <string name="title_activity_salirseguro">salirseguro</string>
+    <string name="title_activity_tomamenu">tomamenu</string>
+    <string name="title_activity_opciones">Opciones</string>
+    <string name="title_activity_invitar__amigos">Invitar_Amigos</string>
+    <string name="title_activity_invitar_amigos_email">InvitarAmigosEmail</string>
+    <string name="title_activity_invitar_amigos_facebook">InvitarAmigosFacebook</string>
 
-    <string name="facebook_app_id">598597040241505</string>
-    <string name="app_id">598597040241505</string>
-    <string name="title_facebook_login">Facebook login</string>
+    <!-- Compartir Datos Globales -->
+    <string name="Linkglobalapk">https://github.com/miguel3079/LiberadAWifi2</string>
+    <!-- Invitar amigos Facebook -->
+    <string name="tituloIntentFace">QizITmonster, nueva APP</string>
+    <string name="captionIntentFace">La mejor apliacion de preguntas que existe en el mundo!</string>
+    <string name="descripcionIntentFace">Con esta app te lo pasarás super super guay!!</string>
+    <!-- Invitar amigos Twitter -->
+    <string name="twittertextoinvitar">Ey!, mirad esta nueva app, QizitMonster</string>
+    <!-- Invitar amigos Whatsapp -->
+    <string name="textoinvitarwhatsapp">Ey prueba esta nuevo aplicacion QIZITmonster se llama y estoy to viciao!</string>
+    <!-- Invitar amigos Mail -->
+    <string name="asuntomailinvitar">Mira que app he encontrado!</string>
+    <string name="mensajemailinvitar">Hola! Me gustaria enseñarte esta app con la <br /> \n
+     que me lo estoy pasando en grande, elige tu monstruo y <br /> \n
+     se el mejor, corre!!  <br /> \n \n
+                Firmado: </string>
+    <string name="title_activity_horizontal_list_view">HorizontalListView</string>
+    <string name="title_activity_intent__test__juego">Intent_Test_Juego</string>
+    <string name="title_activity_mi_monstruo">MiMonstruo</string>
+
 </resources>

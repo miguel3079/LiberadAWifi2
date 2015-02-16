@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="natour.issam.examen.es.proyecto_qiz" >
+    package="natour.issam.proyecto.es.proyecto_qiz" >
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
-    <uses-permission android:name="android.permission.SET_DEBUG_APP"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.SET_DEBUG_APP" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_COURSE_LOCATION" />
@@ -14,19 +15,18 @@
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
     <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
 
-
-
-
+    <meta-data
+        android:name="com.facebook.sdk.ApplicationId"
+        android:value="@string/app_id" />
 
     <application
+        android:name=".ConexionParse"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme"
-        android:name=".AplicationQiz">
-
+        android:theme="@style/AppTheme" >
         <activity
-            android:name=".Inicio"
+            android:name=".Login"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -34,15 +34,73 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name="com.facebook.LoginActivity"
-            android:label="@string/title_facebook_login" >
-        </activity>
+        <activity android:name="com.facebook.LoginActivity" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/app_id" />
+
         <activity
             android:name=".Registro"
             android:label="@string/title_activity_registro" >
         </activity>
+        <activity
+            android:name=".ContrasenaOlvidada"
+            android:label="@string/title_activity_contrasena_olvidada" >
+        </activity>
+        <activity
+            android:name=".Panel_Inicio"
+            android:label="@string/title_activity_panel__inicio" >
+        </activity>
+        <activity
+            android:name=".Puntuacion"
+            android:label="@string/title_activity_puntuacion" >
+        </activity>
+        <!--
+        asfsaf
+        <activity
+            android:name=".salirseguro"
+            android:label="@string/title_activity_salirseguro"
+            android:screenOrientation="portrait" >
 
+        </activity>
+        -->
+        <activity
+            android:name=".tomamenu"
+            android:label="@string/title_activity_tomamenu"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ventana_emergente"
+            android:label="@string/title_activity_ventana_emergente" >
+        </activity>
+        <activity
+            android:name=".Opciones"
+            android:label="@string/title_activity_opciones" >
+        </activity>
+        <activity
+            android:name=".Invitar_Amigos"
+            android:label="@string/title_activity_invitar__amigos" >
+            <meta-data
+                android:name="com.facebook.sdk.ApplicationId"
+                android:value="@string/app_id" />
+        </activity>
+        <activity
+            android:name=".invitarFriends.InvitarAmigosEmail"
+            android:label="@string/title_activity_invitar_amigos_email" >
+        </activity>
+        <activity
+            android:name=".HorizontalListViewDemo"
+            android:label="@string/title_activity_horizontal_list_view" >
+        </activity>
+        <activity
+            android:name=".Intent_Test_Juego"
+            android:label="@string/title_activity_intent__test__juego" >
+        </activity>
+        <activity
+            android:name=".monstruos.MiMonstruo"
+            android:label="@string/title_activity_mi_monstruo" >
+        </activity>
     </application>
 
 </manifest>

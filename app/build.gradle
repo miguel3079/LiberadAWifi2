@@ -5,7 +5,7 @@ android {
     buildToolsVersion "21.1.1"
 
     defaultConfig {
-        applicationId "natour.issam.examen.es.proyecto_qiz"
+        applicationId "natour.issam.proyecto.es.proyecto_qiz"
         minSdkVersion 14
         targetSdkVersion 21
         versionCode 1
@@ -23,7 +23,11 @@ android {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:appcompat-v7:21.0.2'
-    compile project(':facebook')
+    //  compile project(':facebook')
     compile 'com.parse.bolts:bolts-android:1.+'
     compile fileTree(dir: 'libs', include: 'Parse-*.jar')
+    compile project(':facebook')
+    compile files('libs/twitter4j-core-4.0.2.jar')
+    compile files('libs/twitter4j-examples-4.0.2.jar')
+    compile files('libs/commons-io-2.4.jar')
 }

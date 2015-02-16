@@ -4,5 +4,12 @@
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
     </style>
+<style name="botonFacebook" >
+
+    <item name="android:width">0dp</item>
+    <item name="android:layout_weight">0.4</item>
+    <item name="android:color">@color/com_facebook_blue</item>
+</style>
+
 
 </resources>

@@ -1,0 +1,90 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".Login"
+    android:background="@drawable/fondologearte">
+
+
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/imageView6"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/panel" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView7"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="49dp"
+        android:src="@drawable/login" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="issam"
+        android:ems="10"
+        android:id="@+id/editText"
+        android:layout_below="@+id/imageView7"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="31dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/editText2"
+        android:layout_below="@+id/editText"
+        android:layout_alignStart="@+id/editText"
+        android:text="issam" />
+
+    <ImageView
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView8"
+        android:layout_below="@+id/editText2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="95dp"
+        android:src="@drawable/loginconfacebook"
+        android:onClick="onLoginClick" />
+
+    <ImageView
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView9"
+        android:layout_marginBottom="46dp"
+        android:src="@drawable/logincongoogle"
+        android:layout_alignBottom="@+id/imageView8"
+        android:layout_alignStart="@+id/imageView8" />
+
+    <ImageView
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageViewLogin"
+        android:src="@drawable/entrar"
+        android:layout_below="@+id/editText2"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView12"
+        android:src="@drawable/registrarse"
+        android:paddingTop="5dp"
+        android:onClick="RegistroButton"
+        android:nestedScrollingEnabled="false"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/imageView7"
+        android:layout_toEndOf="@+id/imageView7" />
+
+</RelativeLayout>

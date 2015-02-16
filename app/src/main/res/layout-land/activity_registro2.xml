@@ -1,0 +1,88 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="natour.issam.proyecto.es.proyecto_qiz.Registro2"
+    android:background="@drawable/fondologearte">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/panel" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView2"
+        android:layout_alignTop="@+id/imageView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="47dp" />
+
+    <ImageView
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView3"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="114dp"
+        android:src="@drawable/registrarsebtn" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView4"
+        android:layout_alignTop="@+id/imageView2"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/robinregistro" />
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/usuarioregistro"
+        android:layout_below="@+id/imageView4"
+        android:layout_centerHorizontal="true"
+        android:text="Usuario" />
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/emailregistro"
+        android:layout_below="@+id/usuarioregistro"
+        android:layout_alignLeft="@+id/usuarioregistro"
+        android:layout_alignStart="@+id/usuarioregistro"
+        android:text="Email" />
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/editText7"
+        android:layout_below="@+id/emailregistro"
+        android:layout_centerHorizontal="true"
+        android:text="Contraseña" />
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/editText8"
+        android:layout_below="@+id/editText7"
+        android:layout_centerHorizontal="true"
+        android:text="Repetir Contraseña" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Acepto los terminos y condiciones"
+        android:id="@+id/checkBox"
+        android:layout_above="@+id/imageView3"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

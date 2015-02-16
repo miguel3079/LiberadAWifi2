@@ -1,0 +1,203 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="natour.issam.proyecto.es.proyecto_qiz.Invitar_Amigos"
+    android:background="@drawable/fondologin">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/panel"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:weightSum="100"
+            >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="15"
+                android:tileMode="repeat"
+
+                android:onClick="invitaramigosfacebook">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_weight="30"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/imageView13"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="false"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="true"
+                    android:onClick="invitaramigosfacebook" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_weight="70"
+                    android:layout_height="match_parent"
+                    android:id="@+id/editText5"
+                    android:text="Facebook"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_toRightOf="@+id/imageView13"
+                    android:layout_toEndOf="@+id/imageView13"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:onClick="invitaramigosfacebook" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="15"
+                android:tileMode="repeat" >
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_weight="30"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/imageView15"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="false"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="true"
+                    android:onClick="CompartirTwitter" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_weight="70"
+                    android:layout_height="match_parent"
+                    android:id="@+id/editText6"
+                    android:text="Twitter"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_toRightOf="@+id/imageView15"
+                    android:layout_toEndOf="@+id/imageView15"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:onClick="CompartirTwitter" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="15"
+                android:tileMode="repeat"
+                android:onClick="invitaramigosemail"
+                android:nestedScrollingEnabled="false">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_weight="30"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/imageView16"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="false"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="true"
+                    android:onClick="invitaramigosemail" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_weight="70"
+                    android:layout_height="match_parent"
+                    android:id="@+id/editText9"
+                    android:text="Mail"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_toRightOf="@+id/imageView16"
+                    android:layout_toEndOf="@+id/imageView16"
+                    android:editable="false"
+                    android:onClick="invitaramigosemail"
+                    android:focusable="false" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="15"
+                android:tileMode="repeat"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_weight="30"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/imageView17"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="false"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="true"
+                    android:onClick="invitarWhatsapp"
+                    android:background="@drawable/whatsappmessengerandroid"
+                    android:layout_marginRight="5dp" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_weight="70"
+                    android:layout_height="match_parent"
+                    android:id="@+id/editText10"
+                    android:text="Whatsapp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_toRightOf="@+id/imageView17"
+                    android:layout_toEndOf="@+id/imageView17"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:onClick="invitarWhatsapp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="15"
+                android:tileMode="repeat"
+                android:layout_marginTop="25dp">
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_weight="80"
+                    android:layout_height="match_parent"
+                    android:id="@+id/editText11"
+                    android:text="Tus amigos se merecen poder jugar a QIZITmonster, ¿No crees?"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_toRightOf="@+id/imageView18"
+                    android:layout_toEndOf="@+id/imageView18"
+                    android:layout_gravity="center"
+                    android:focusable="false"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

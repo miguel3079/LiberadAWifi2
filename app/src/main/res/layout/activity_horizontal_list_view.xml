@@ -1,0 +1,46 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/fondologearte"
+    tools:context="natour.issam.proyecto.es.proyecto_qiz.HorizontalListViewDemo">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/panel"
+        android:layout_margin="14dp">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/linearLayout">
+
+            <natour.issam.proyecto.es.proyecto_qiz.HorizontalListView
+                android:id="@+id/listview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fadeScrollbars="false"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:autoText="true"
+                android:layout_margin="15dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="270dp"
+            android:id="@+id/linearLayout">
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>
