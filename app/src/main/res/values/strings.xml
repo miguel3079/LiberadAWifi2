@@ -34,5 +34,64 @@
     <string name="title_activity_salirseguro">salirseguro</string>
     <string name="title_activity_tomamenu">tomamenu</string>
     <string name="title_activity_opciones">Opciones</string>
+    <string name="title_activity_juego1">Juego1</string>
+    <string name="title_activity_Lateral">Lateral</string>
+
+    <!-- Lista de titulos de navegacion -->
+    <string-array name="nav_options">
+        <item>Perfil</item>
+        <item>Favoritos</item>
+        <item>Eventos</item>
+        <item>Lugares</item>
+        <item>Etiquetas</item>
+        <item>Configuración</item>
+        <item>Compartir</item>
+    </string-array>
+    <!-- Lista de iconos de navegacion -->
+    <array name="navigation_iconos">
+        <item>@drawable/ic_action_user</item>
+        <item>@drawable/ic_action_star</item>
+        <item>@drawable/ic_action_event</item>
+        <item>@drawable/ic_action_place</item>
+        <item>@drawable/ic_action_labels</item>
+        <item>@drawable/ic_action_settings</item>
+        <item>@drawable/ic_action_share</item>
+    </array>
+
+    <string name="title_activity_intro">Intro</string>
+    <string name="skipe">SKIP</string>
+    <string name="title_activity_mapa_de_juego">MapaDeJuego</string>
+    <string name="title_activity_paypal">paypal</string>
+
+    <!-- id de aplicaciones -->
+    <!-- facebook -->
+
+    <string name="TwitterKey">CXXS9yL411yTHrD194NHbJsob</string>
+    <string name="TwitterSecret">nvAowbisJuWDceotrff01NOOaETE3QvQEQeuLTv7GVyBSuyHjF</string>
+
+    <string name="title_activity_invitar__amigos">Invitar_Amigos</string>
+    <string name="title_activity_invitar_amigos_email">InvitarAmigosEmail</string>
+    <string name="title_activity_invitar_amigos_facebook">InvitarAmigosFacebook</string>
+
+    <!-- Compartir Datos Globales -->
+    <string name="Linkglobalapk">https://github.com/miguel3079/LiberadAWifi2</string>
+    <!-- Invitar amigos Facebook -->
+    <string name="tituloIntentFace">QizITmonster, nueva APP</string>
+    <string name="captionIntentFace">La mejor apliacion de preguntas que existe en el mundo!</string>
+    <string name="descripcionIntentFace">Con esta app te lo pasarás super super guay!!</string>
+    <!-- Invitar amigos Twitter -->
+    <string name="twittertextoinvitar">Ey!, mirad esta nueva app, QizitMonster</string>
+    <!-- Invitar amigos Whatsapp -->
+    <string name="textoinvitarwhatsapp">Ey prueba esta nuevo aplicacion QIZITmonster se llama y estoy to viciao!</string>
+    <!-- Invitar amigos Mail -->
+    <string name="asuntomailinvitar">Mira que app he encontrado!</string>
+    <string name="mensajemailinvitar">Hola! Me gustaria enseñarte esta app con la <br /> \n
+     que me lo estoy pasando en grande, elige tu monstruo y <br /> \n
+     se el mejor, corre!!  <br /> \n \n
+                Firmado: </string>
+    <string name="title_activity_horizontal_list_view">HorizontalListView</string>
+    <string name="title_activity_intent__test__juego">Intent_Test_Juego</string>
+    <string name="title_activity_mi_monstruo">MiMonstruo</string>
+    <string name="title_activity_premios__aciertos">Premios_Aciertos</string>
 
 </resources>
