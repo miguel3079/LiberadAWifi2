@@ -9,14 +9,28 @@ public class Monstruos {
     int monedas;
     int diamantes;
     int escomprado;
+    String imagen;
+    public Monstruos(){
+
+    }
 
 
-    public Monstruos(int id,String nombre,int monedas,int diamantes,int escomprado){
+    public Monstruos(int id,String nombre,int monedas,int diamantes,int escomprado,String imagen){
         this.id=id;
         this.nombre=nombre;
         this.monedas=monedas;
         this.diamantes=diamantes;
         this.escomprado=escomprado;
+        this.imagen=imagen;
+    }
+
+
+    public String getImagen() {
+        return imagen;
+    }
+
+    public void setImagen(String imagen) {
+        this.imagen = imagen;
     }
 
     public int getId() {

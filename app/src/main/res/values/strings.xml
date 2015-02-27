@@ -59,5 +59,6 @@
     <string name="title_activity_horizontal_list_view">HorizontalListView</string>
     <string name="title_activity_intent__test__juego">Intent_Test_Juego</string>
     <string name="title_activity_mi_monstruo">MiMonstruo</string>
+    <string name="title_activity_premios__aciertos">Premios_Aciertos</string>
 
 </resources>

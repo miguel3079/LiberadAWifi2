@@ -101,6 +101,10 @@
             android:name=".monstruos.MiMonstruo"
             android:label="@string/title_activity_mi_monstruo" >
         </activity>
+        <activity
+            android:name=".Tiempos.Premios_Aciertos"
+            android:label="@string/title_activity_premios__aciertos" >
+        </activity>
     </application>
 
 </manifest>

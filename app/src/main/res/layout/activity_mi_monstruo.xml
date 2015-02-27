@@ -35,22 +35,32 @@
                     android:layout_width="0dp"
                     android:layout_weight="50"
                     android:layout_height="fill_parent"
+                    android:weightSum="100"
                     android:layout_gravity="center_vertical">
 
 
                     <TextView
                         android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="0sp"
                         android:text="Mi monstruo"
                         android:id="@+id/textView9"
                         android:gravity="center_vertical|center_horizontal"
-                        android:layout_marginTop="10dp" />
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="10"/>
 
                     <ImageView
                         android:layout_width="fill_parent"
-                        android:layout_height="fill_parent"
-                        android:id="@+id/imageView19"
-                        android:layout_gravity="center_horizontal" />
+                        android:layout_height="0sp"
+                        android:id="@+id/imagemimonster"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="80"/>
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="0sp"
+                        android:id="@+id/textmimonstruo"
+                        android:layout_weight="10"
+                        android:gravity="center_vertical|center_horizontal" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -76,29 +86,124 @@
                         android:id="@+id/layaouthabilidades">
 
                         <LinearLayout
-                            android:orientation="vertical"
+                            android:orientation="horizontal"
                             android:layout_width="match_parent"
                             android:layout_height="0sp"
                             android:layout_weight="25"
-                            android:layout_gravity="center_horizontal"></LinearLayout>
+                            android:weightSum="100"
+                            android:layout_gravity="center_horizontal"
+                            android:id="@+id/linearhabilidad1">
+
+                            <ImageView
+                                android:layout_width="0sp"
+                                android:layout_weight="20"
+                                android:layout_height="match_parent"
+                                android:id="@+id/imagenhabilidad1" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_weight="60"
+                                android:layout_height="fill_parent"
+                                android:text=""
+                                android:id="@+id/nombrehabilidad1"
+                                android:gravity="center_vertical|center_horizontal" />
+
+                            <TextView
+                                android:layout_width="0sp"
+                                android:layout_weight="20"
+                                android:layout_height="fill_parent"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:id="@+id/cantidadhabilidad1"
+                                android:gravity="center_vertical|center_horizontal" />
+
+                        </LinearLayout>
 
                         <LinearLayout
-                            android:orientation="vertical"
+                            android:orientation="horizontal"
                             android:layout_width="fill_parent"
                             android:layout_weight="25"
-                            android:layout_height="0sp"></LinearLayout>
+                            android:layout_height="0sp">
+
+                            <ImageView
+                                android:layout_width="0sp"
+                                android:layout_weight="20"
+                                android:layout_height="match_parent"
+                                android:id="@+id/imagenhabilidad2" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_weight="60"
+                                android:layout_height="fill_parent"
+                                android:text=""
+                                android:id="@+id/nombrehabilidad2"
+                                android:gravity="center_vertical|center_horizontal" />
+
+                            <TextView
+                                android:layout_width="0sp"
+                                android:layout_weight="20"
+                                android:layout_height="fill_parent"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:id="@+id/cantidadhabilidad2"
+                                android:gravity="center_vertical|center_horizontal" />
+                        </LinearLayout>
 
                         <LinearLayout
-                            android:orientation="vertical"
+                            android:orientation="horizontal"
                             android:layout_width="fill_parent"
                             android:layout_weight="25"
-                            android:layout_height="0sp"></LinearLayout>
+                            android:layout_height="0sp">
+
+                            <ImageView
+                                android:layout_width="0sp"
+                                android:layout_weight="20"
+                                android:layout_height="match_parent"
+                                android:id="@+id/imagenhabilidad3" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_weight="60"
+                                android:layout_height="fill_parent"
+                                android:text=""
+                                android:id="@+id/nombrehabilidad3"
+                                android:gravity="center_vertical|center_horizontal" />
+
+                            <TextView
+                                android:layout_width="0sp"
+                                android:layout_weight="20"
+                                android:layout_height="fill_parent"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:id="@+id/cantidadhabilidad3"
+                                android:gravity="center_vertical|center_horizontal" />
+                        </LinearLayout>
 
                         <LinearLayout
-                            android:orientation="vertical"
+                            android:orientation="horizontal"
                             android:layout_width="fill_parent"
                             android:layout_height="0sp"
-                            android:layout_weight="25"></LinearLayout>
+                            android:layout_weight="25">
+
+                            <ImageView
+                                android:layout_width="0sp"
+                                android:layout_weight="20"
+                                android:layout_height="match_parent"
+                                android:id="@+id/imagenhabilidad4" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_weight="60"
+                                android:layout_height="fill_parent"
+                                android:text=""
+                                android:id="@+id/nombrehabilidad4"
+                                android:gravity="center_vertical|center_horizontal" />
+
+                            <TextView
+                                android:layout_width="0sp"
+                                android:layout_weight="20"
+                                android:layout_height="fill_parent"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:id="@+id/cantidadhabilidad4"
+                                android:gravity="center_vertical|center_horizontal" />
+                        </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>
 
@@ -111,7 +216,7 @@
                 android:layout_weight="45"
                 android:id="@+id/monstruosdisponibleslayout">
 
-                <EditText
+                <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/editText12"
@@ -122,7 +227,7 @@
                 <natour.issam.proyecto.es.proyecto_qiz.HorizontalListView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/listView"
+                    android:id="@+id/listViewAlMonsters"
                     android:layout_gravity="center_horizontal" />
             </LinearLayout>
         </LinearLayout>

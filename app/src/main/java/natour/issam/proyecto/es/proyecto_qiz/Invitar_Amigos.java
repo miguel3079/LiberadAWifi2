@@ -122,6 +122,23 @@ public class Invitar_Amigos extends ActionBarActivity {
             throw new RuntimeException("URLEncoder.encode() failed for " + s);
         }
     }
+
+
+    public void onClickMapa(View v) {
+        float latitude = 40.3736f;
+        float longitude = -3.919848f;
+        String url = String.format("geo:%f, %f", latitude, longitude);
+        Intent i = new Intent(android.content.Intent.ACTION_VIEW,
+                Uri.parse(url));
+        startActivity(i);
+    }
+
+    public void onClickLlamada(View v) {
+
+        Intent i = new Intent(android.content.Intent.ACTION_DIAL,
+                Uri.parse("tel:+902232350")); //
+        startActivity(i);
+    }
     public void CompartirTwitter(View v){
         if(isNetworkAvailable()) {
             String tweetUrl =

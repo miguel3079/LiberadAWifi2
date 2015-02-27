@@ -80,21 +80,19 @@
         android:layout_height="wrap_content"
         android:text="+tiempo"
         android:id="@+id/buttonsumartiempo"
-        android:layout_marginTop="92dp"
+        android:layout_marginTop="50dp"
         android:layout_below="@+id/imagenpregunta"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignRight="@+id/botonfiftyfifty"
+        android:layout_alignEnd="@+id/botonfiftyfifty" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Consejo"
         android:id="@+id/botonconejo"
-        android:layout_below="@+id/buttonsumartiempo"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignLeft="@+id/buttonsumartiempo"
-        android:layout_alignStart="@+id/buttonsumartiempo" />
+        android:layout_centerVertical="true"
+        android:layout_alignRight="@+id/botonfiftyfifty"
+        android:layout_alignEnd="@+id/botonfiftyfifty" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -109,7 +107,34 @@
         android:layout_height="wrap_content"
         android:text="50%"
         android:id="@+id/botonfiftyfifty"
-        android:layout_below="@+id/botonconejo"
+        android:layout_above="@+id/botonpreguntaB"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/textocantidaddetiempo"
+        android:layout_alignTop="@+id/buttonsumartiempo"
+        android:layout_alignRight="@+id/buttonsumartiempo"
+        android:layout_alignEnd="@+id/buttonsumartiempo" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/textocantidaddeconsejos"
+        android:layout_alignTop="@+id/botonconejo"
+        android:layout_alignRight="@+id/botonconejo"
+        android:layout_alignEnd="@+id/botonconejo" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/textocantidaddefiftyfifty"
+        android:layout_alignTop="@+id/botonfiftyfifty"
+        android:layout_alignRight="@+id/botonfiftyfifty"
+        android:layout_alignEnd="@+id/botonfiftyfifty" />
 </RelativeLayout>

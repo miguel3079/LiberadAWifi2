@@ -1,6 +1,7 @@
 package natour.issam.proyecto.es.proyecto_qiz;
 
 import android.app.Activity;
+import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
 import android.os.SystemClock;
@@ -21,6 +22,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
@@ -28,6 +30,9 @@ import android.widget.RemoteViews;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.parse.ParseUser;
+
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Random;
 import java.util.Timer;
@@ -36,10 +41,12 @@ import java.util.concurrent.ExecutionException;
 
 import natour.issam.proyecto.es.proyecto_qiz.MiTest.CargarTests;
 import natour.issam.proyecto.es.proyecto_qiz.MiTest.Test;
+import natour.issam.proyecto.es.proyecto_qiz.Tiempos.Premios_Aciertos;
+import natour.issam.proyecto.es.proyecto_qiz.monstruos.Habilidades;
 
 
 public class Intent_Test_Juego extends ActionBarActivity {
-
+    MetodosSqlite metodosSqlite;
     private int TIEMPOLIMITE=15;
     private int TIEMPOAUMENTADO=1;
 
@@ -59,6 +66,14 @@ public class Intent_Test_Juego extends ActionBarActivity {
     boolean Cancelar;
     boolean issumartiempo;
     Activity activity;
+    Context context;
+    int myProgress;
+
+    /* Comprobar variables    */
+    boolean istimeused=false;
+    boolean isfiftyfiftyused=false;
+    boolean isconsejoused=false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -76,26 +91,48 @@ public class Intent_Test_Juego extends ActionBarActivity {
         b = (Button) findViewById(R.id.botonpreguntaB);
         c = (Button) findViewById(R.id.botonpreguntaC);
         d = (Button) findViewById(R.id.botonpreguntaD);
-
+        context=this;
+        metodosSqlite = new MetodosSqlite(context);
         sumartiempo.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                sumartiempo.setEnabled(false);
-                barratime.setMax(TIEMPOLIMITE+TIEMPOAUMENTADO);
-                issumartiempo=true;
+                if (metodosSqlite.getCantidadFromUserAndIdhabilidad(ParseUser.getCurrentUser(),3)>0){
+                    sumartiempo.setEnabled(false);
+                    barratime.setMax(TIEMPOLIMITE + TIEMPOAUMENTADO);
+                    issumartiempo = true;
+                    metodosSqlite.restarhabilidaddeusuario(ParseUser.getCurrentUser(), 3);
+                    istimeused=true;
+                    cargarHabilidades();
+            }else {
+                    Toast.makeText(context, "NO TIENES MAS TIME", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
         botonconsejo.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-
-           cargarConsejo(idTest);
-                botonconsejo.setEnabled(false);
+           if(metodosSqlite.getCantidadFromUserAndIdhabilidad(ParseUser.getCurrentUser(),1)>0) {
+               cargarConsejo(idTest);
+               botonconsejo.setEnabled(false);
+               isconsejoused=true;
+               metodosSqlite.restarhabilidaddeusuario(ParseUser.getCurrentUser(), 1);
+               cargarHabilidades();
+           }else {
+               Toast.makeText(context, "NO TE QUEDAN CONSEJOS", Toast.LENGTH_SHORT).show();
+           }
             }
         });
 
         fiftyfifty.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                ayudamitadrespuesta(idTest);
+                if(metodosSqlite.getCantidadFromUserAndIdhabilidad(ParseUser.getCurrentUser(),2)>0){
+                    ayudamitadrespuesta(idTest);
+                    metodosSqlite.restarhabilidaddeusuario(ParseUser.getCurrentUser(), 2);
+                    isfiftyfiftyused=true;
+                    cargarHabilidades();
+                }else{
+                    Toast.makeText(context, "NO TE QUEDAN FIFTYFIFTY", Toast.LENGTH_SHORT).show();
+                }
+
             }
         });
         Bundle b = getIntent().getExtras();
@@ -113,11 +150,32 @@ public class Intent_Test_Juego extends ActionBarActivity {
         tiempo.execute();
 
         Cancelar=false;
+
+        cargarHabilidades();
     }
 
     private void parartiempo(){
         Cancelar=true;
         tiempo.cancel(true);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        parartiempo();
+    }
+
+    private void TestCorrecto(){
+        int tiempousado = myProgress;
+
+        Intent intent = new Intent(this, Premios_Aciertos.class);
+        intent.putExtra("tiempousado", tiempousado);
+        intent.putExtra("istimeused", istimeused);
+        intent.putExtra("isfiftyfiftyused", isfiftyfiftyused);
+        intent.putExtra("isconsejoused", isconsejoused);
+        startActivity(intent);
+        finish();
+
     }
 
     private void ayudamitadrespuesta(int numerodetest){
@@ -174,6 +232,8 @@ public class Intent_Test_Juego extends ActionBarActivity {
             String nameofdrawable=Tests.get(numerodetest).getPreguntas().get(0).getImagen();
             String titulopregunta=Tests.get(numerodetest).getPreguntas().get(0).getTitulo();
             Pregunta.setText(titulopregunta);
+
+
             int drawableResourceId = this.getResources().getIdentifier(nameofdrawable, "drawable", this.getPackageName());
             imagenPregunta.setImageResource(drawableResourceId);
 }
@@ -188,6 +248,7 @@ public class Intent_Test_Juego extends ActionBarActivity {
             Log.i("Boton A","TRUE");
             Toast.makeText(this, "Respuesta correcta", Toast.LENGTH_SHORT).show();
             parartiempo();
+            TestCorrecto();
         }else{
             Toast.makeText(this, "Respuesta fallida", Toast.LENGTH_SHORT).show();
             finish();parartiempo();
@@ -199,6 +260,7 @@ public class Intent_Test_Juego extends ActionBarActivity {
             parartiempo();
             Toast.makeText(this, "Respuesta correcta", Toast.LENGTH_SHORT).show();
             Log.i("Boton B","TRUE");
+            TestCorrecto();
         }else{
             Toast.makeText(this, "Respuesta fallida", Toast.LENGTH_SHORT).show();
             finish();parartiempo();
@@ -210,6 +272,7 @@ public class Intent_Test_Juego extends ActionBarActivity {
             parartiempo();
             Toast.makeText(this, "Respuesta correcta", Toast.LENGTH_SHORT).show();
             Log.i("Boton c","TRUE");
+            TestCorrecto();
         }else{
             Toast.makeText(this, "Respuesta fallida", Toast.LENGTH_SHORT).show();
             finish();parartiempo();
@@ -221,10 +284,47 @@ public class Intent_Test_Juego extends ActionBarActivity {
             parartiempo();
             Toast.makeText(this, "Respuesta correcta", Toast.LENGTH_SHORT).show();
             Log.i("Boton d","TRUE");
+            TestCorrecto();
         }else{
             Toast.makeText(this, "Respuesta fallida", Toast.LENGTH_SHORT).show();
             parartiempo();
             finish();
+
+        }
+
+    }
+
+    public void cargarHabilidades(){
+        ParseUser currenUser = ParseUser.getCurrentUser();
+        int idmonster= metodosSqlite.getidmonstruoactual(currenUser);
+        ArrayList<Habilidades> habilidad = metodosSqlite.seleccionarhabilidadesdemonstruoid(idmonster);
+
+
+
+        sumartiempo.setVisibility(View.GONE);
+        botonconsejo.setVisibility(View.GONE);
+        fiftyfifty.setVisibility(View.GONE);
+
+        for(int i=0;i<habilidad.size();i++){
+            if(habilidad.get(i).getId()==1){
+
+                TextView consejoview = (TextView)findViewById(R.id.textocantidaddeconsejos);
+                int cantidad =metodosSqlite.getCantidadFromUserAndIdhabilidad(currenUser,habilidad.get(i).getId());
+
+                consejoview.setText(String.valueOf(cantidad));
+                botonconsejo.setVisibility(View.VISIBLE);
+            } else if(habilidad.get(i).getId()==2){
+                TextView fiftyfiftyview = (TextView)findViewById(R.id.textocantidaddefiftyfifty);
+                int cantidad =metodosSqlite.getCantidadFromUserAndIdhabilidad(currenUser,habilidad.get(i).getId());
+
+                fiftyfiftyview.setText(String.valueOf(cantidad));
+                fiftyfifty.setVisibility(View.VISIBLE);
+            }else if((habilidad.get(i).getId()==3)){
+                TextView textotimeview = (TextView)findViewById(R.id.textocantidaddetiempo);
+                int cantidad =metodosSqlite.getCantidadFromUserAndIdhabilidad(currenUser,habilidad.get(i).getId());
+                sumartiempo.setVisibility(View.VISIBLE);
+                textotimeview.setText(String.valueOf(cantidad));
+            }
 
         }
 
@@ -250,9 +350,9 @@ public class Intent_Test_Juego extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
-    public class BackgroundAsyncTask extends AsyncTask<Void, Integer, Void> {
+     class BackgroundAsyncTask extends AsyncTask<Void, Integer, Void> {
         Activity actividad;
-        int myProgress;
+
 
         int TIEMPOMAXIMO=TIEMPOLIMITE;
         public  BackgroundAsyncTask(Activity activity){
@@ -280,6 +380,9 @@ public class Intent_Test_Juego extends ActionBarActivity {
         protected Void doInBackground(Void... params) {
             // TODO Auto-generated method stub
             while(myProgress<TIEMPOMAXIMO){
+                if (isCancelled())
+                    break;
+
                 if(Cancelar==true){
                     myProgress=TIEMPOMAXIMO;
                 }else {
@@ -296,6 +399,11 @@ public class Intent_Test_Juego extends ActionBarActivity {
                 SystemClock.sleep(1000);}
             }
             return null;
+        }
+
+        @Override
+        protected void onCancelled() {
+            super.onCancelled();
         }
 
         @Override

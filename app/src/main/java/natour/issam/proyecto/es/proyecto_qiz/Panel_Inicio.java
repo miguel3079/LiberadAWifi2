@@ -11,6 +11,8 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.media.MediaPlayer;
 import android.net.Uri;
+import android.os.AsyncTask;
+import android.os.CountDownTimer;
 import android.provider.MediaStore;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -19,6 +21,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
+import android.text.format.DateFormat;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -59,11 +62,13 @@ import org.json.JSONObject;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.Calendar;
 import java.util.LinkedList;
 import java.util.concurrent.ExecutionException;
 
 import natour.issam.proyecto.es.proyecto_qiz.MiTest.CargarTests;
 import natour.issam.proyecto.es.proyecto_qiz.MiTest.Test;
+import natour.issam.proyecto.es.proyecto_qiz.Tiempos.TiempoDeConsejos;
 
 
 public class Panel_Inicio extends ActionBarActivity implements NavigationDrawerFragment.NavigationDrawerCallbacks {
@@ -89,6 +94,10 @@ public class Panel_Inicio extends ActionBarActivity implements NavigationDrawerF
     SharedPreferences appPrefs;
     SharedPreferences.Editor editablepref;
     ProgressBar barra;
+    TextView  tvTime;
+    java.util.Date noteTS;
+    String time, date;
+    TiempoDeConsejos tiempoDeConsejos;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -112,8 +121,6 @@ public class Panel_Inicio extends ActionBarActivity implements NavigationDrawerF
 
 
         ConnectSQLite connectSQLite=new ConnectSQLite(this);
-
-         db = connectSQLite.getWritableDatabase();
 
 
         connectSQLite.createDataBase();
@@ -169,24 +176,11 @@ public class Panel_Inicio extends ActionBarActivity implements NavigationDrawerF
             }
         });
 
+          tvTime = (TextView) findViewById(R.id.textime);
+
+
 
     }
-
-
-    public void ensenarTablas(){
-        String[] columnNames;
-        Cursor c = db.rawQuery("SELECT * FROM mitable ",null);
-        try {
-           columnNames = c.getColumnNames();
-        } finally {
-            c.close();
-        }
-
-        for (int i=0;i<columnNames.length;i++){
-            Log.i("Tabla",columnNames[i]);
-        }
-    }
-
 
 
  public void comprobarYcargarusuario(ParseUser currentUser,Session session,boolean usuarioTwitterLinked){

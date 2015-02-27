@@ -27,6 +27,8 @@ import android.widget.Toast;
 
 import java.util.LinkedList;
 
+import natour.issam.proyecto.es.proyecto_qiz.monstruos.MiMonstruo;
+
 /**
  * Fragment used for managing interactions for and presentation of a navigation drawer.
  * See the <a href="https://developer.android.com/design/patterns/navigation-drawer.html#Interaction">
@@ -115,7 +117,7 @@ public class NavigationDrawerFragment extends Fragment {
                 android.R.layout.simple_list_item_activated_1,
                 android.R.id.text1,
                 new String[]{
-                        getString(R.string.title_section1),"InvitarAmigos","juego"
+                        getString(R.string.title_section1),"InvitarAmigos","juego","MIMONSTRUOARGG"
                 }));
         mDrawerListView.setItemChecked(mCurrentSelectedPosition, true);
         return mDrawerListView;
@@ -216,10 +218,17 @@ public class NavigationDrawerFragment extends Fragment {
                startActivity(intent_opciones);
                break;
            case 2:
-               LinkedList<String> lista = new LinkedList<>();
+
                Intent intent = new Intent(this.getActivity(), Intent_Test_Juego.class);
                intent.putExtra("id", 0);
                startActivity(intent);
+
+               break;
+           case 3:
+
+               Intent intent5 = new Intent(this.getActivity(), MiMonstruo.class);
+
+               startActivity(intent5);
 
                break;
 

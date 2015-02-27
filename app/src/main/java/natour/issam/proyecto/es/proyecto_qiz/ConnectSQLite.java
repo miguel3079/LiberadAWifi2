@@ -11,6 +11,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 
+
 public class ConnectSQLite extends SQLiteOpenHelper {
 
 
@@ -34,7 +35,7 @@ public class ConnectSQLite extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         try {
         } catch (SQLException e) {
-            Log.e("SQLException ",e.toString());
+
         }
 
     }
